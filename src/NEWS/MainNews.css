@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display:regular);
+.hii {
+  height: 58vh;
+  width: 48vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* transition: ease 0.1s; */
+}
+.mainScreen {
+  display: flex;
+}
+.mainImage {
+  width: 48vw;
+  height: 58vh;
+  filter: brightness(35%);
+}
+.details {
+  position: absolute;
+  color: white;
+  width: 48vw;
+  height: 58vh;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  position: absolute;
+  font-family: Gilda Display;
+  font-size: 1.7rem;
+  width: 30vw;
+  bottom: 20vh;
+  /* right: -15px; */
+}
+
+.Description {
+  position: absolute;
+  font-family: monospace;
+  padding: 4px;
+  width: 40vw;
+  bottom: 9.7vh;
+  /* border: 2px solid red; */
+  color: rgb(212, 212, 212);
+  font-size: 0.9rem;
+  height: 10vh;
+  overflow-y: hidden;
+}
+.heading {
+  display: flex;
+  color: rgb(199, 198, 198);
+  height: 100px;
+  width: 48vw;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  font-family: Arial;
+  color: rgb(199, 198, 198);
+  align-items: center;
+  padding: 40px;
+}
+
+.DateLogo {
+  height: 20px;
+}
+.Date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.control {
+  display: flex;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  width: 48vw;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+.textDetail {
+  display: flex;
+  flex-direction: column;
+  width: 48vw;
+  height: 37vh;
+  padding: 40px;
+  /* border: 2px solid red; */
+}
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.838);
+  border-radius: 10px;
+}
+.prev:hover {
+  background-color: rgba(2, 1, 0, 0.838);
+  border-radius: 10px;
+}

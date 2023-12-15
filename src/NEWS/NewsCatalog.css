@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Kalnia:100,200,300,regular,500,600,700);
+.news-box{
+    color: white;
+    height: 105px;
+    /* border: 2px solid yellow; */
+    display: flex;
+    background-color: rgba(26, 24, 24, 0.53);
+    row-gap: 100px;
+    cursor: pointer;
+    box-shadow:  29px 29px 75px #65646433,
+             -29px -29px 75px #6a5c5c17;
+    
+}
+.news-box-image{
+    height: 105px;
+    width: 110px;
+    
+}
+.news-box-title{
+    font-family: kalnia;
+    font-size:1.2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    
+}
+.heading-line{
+    font-size: 1rem;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    color: rgba(255, 255, 255, 0.502);
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}

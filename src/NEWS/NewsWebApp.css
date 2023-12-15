@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+body {
+   /* background-image: url("backgroundImage"); */
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.imageStyle{
+   height: 300px;
+   width: 500px;
+}
+.mainContainer{
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #5b5655af;
+}
+.content-box{
+   padding: 40px;
+   height: 95vh;
+   width: 93vw;
+   background: radial-gradient(circle, rgba(42, 42, 42, 0.811) 35%, rgba(79, 60, 47, 0.989) 100%);
+   border-radius: 40px;
+}
+.logo{
+   cursor: pointer;
+   width: 180px;
+   box-shadow: 2px 2px 10px 2px rgb(72, 47, 47);
+}
+h1{
+   margin-top: 20px;
+   font-size:3rem;
+   font-family: pt sans;
+   color: rgb(239, 238, 238);
+   font-weight: 100;
+}
+.News-category{
+   color: rgb(229, 227, 227);
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.typeMenu{
+   border: 2px solid rgb(195, 194, 194);
+   padding: 4px 10px 3px 10px;
+   border-radius: 20px;
+   cursor: pointer;
+   background: none;
+   color: white;
+}
+.typeMenu:focus{
+   border: 2px solid rgb(153, 74, 4);
+}
+.searchRow{
+   display: flex;
+   justify-content: space-between;
+}
+.search-bar{
+   background: none;
+   height: 34px;
+   width: 300px;
+   padding-left: 15px;
+   justify-content: center;
+   border: none;
+   color: white;
+   outline: none;
+   font-family:monospace ;
+}
+.input-line{
+   display: flex;
+   border: 2px solid white;
+   border-radius: 30px;
+   margin-top: 40px;
+   height: 38px;
+   width: 340px;
+}
+.search-icon{
+   margin-top: 5px;
+   height: 24px;
+   cursor: pointer;
+}
+main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 65vh;
+   gap: 40px;
+}
+.desc-Box{
+   height: 58vh;
+   width: 48vw;
+   /* border: 2px solid yellow; */
+   display: flex;
+   overflow-y: hidden;
+   /* overflow-x: scroll; */
+   /* border: 2px solid red; */
+}
+.title-Box{
+   height: 58vh;
+   width: 33vw;
+   /* border: 2px solid rgb(0, 255, 76); */
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+::-webkit-scrollbar{
+	width: 7px;
+   height: 1px;
+   	/* background-color: #0909094e;  */
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #d3b1914c;
+}
+/* ::-webkit-scrollbar-track{
+	background-color: #a69c9cd4;
+} */
+
+.downarrow{
+   mix-blend-mode: multiply;
+   position: absolute;
+   bottom: 90px;
+   right: 90px;
+}
+.desc-Box{
+   background-color: rgba(26, 24, 24, 0.53);
+   box-shadow:  29px 29px 75px #65646433,
+   -29px -29px 75px #6a5c5c17;
+}
