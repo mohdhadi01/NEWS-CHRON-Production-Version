@@ -3,7 +3,7 @@ import "../NEWS/NewsCatalog.css";
 
 
 function NewsCatalog(props) {
-  const newsDetail = props.passJsonData;
+  const newsDetail = props.passJsonData; 
 
 
   const formatDate = (dateString) => {
@@ -29,8 +29,8 @@ function NewsCatalog(props) {
                 />
                 <div className="news-box-title">
                   <div className="heading-line">
-                    <h5>{news.creator}</h5>
-                    <h5>{formatDate(news.pubDate)}</h5>
+                    <h5 className="creator">{news.creator}</h5>
+                    <h5 className="date">{formatDate(news.pubDate)}</h5>
                   </div>
                   <p>{shortTitle}...</p>
                 </div>

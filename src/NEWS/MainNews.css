@@ -30,6 +30,7 @@
   width: 30vw;
   bottom: 20vh;
   /* right: -15px; */
+  /* border: 2px solid black; */
 }
 
 .Description {
@@ -90,4 +91,27 @@
 .prev:hover {
   background-color: rgba(2, 1, 0, 0.838);
   border-radius: 10px;
+}
+
+
+
+
+@media (max-width:1350px)  {
+  .title{
+    font-size:1.6rem ;
+    width: 36vw;
+  }
+  .Description{
+    font-size:0.87rem ;
+  }
+}
+
+@media (max-width:1170px)  {
+  .title{
+    font-size:1.5rem ;
+    width: 36vw;
+  }
+  .Description{
+    font-size:0.8rem ;
+  }
 }

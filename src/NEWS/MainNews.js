@@ -3,6 +3,7 @@ import "../NEWS/MainNews.css";
 import DateLogo from "../Assets/DateLogo.png";
 import next from "../Assets/nextArrow.png";
 import previous from "../Assets/previousLogo.png";
+import { Button, Flex } from "antd";
 
 function MainNews(props) {
   const newsList = props.passJsonData;
@@ -84,6 +85,7 @@ function MainNews(props) {
                     <h2 className="title">{shortTitle}"</h2>
                     <p className="Description">{news.description}</p>
                   </div>
+                  {/* <Button type="primary">Read More.</Button> */}
                   <div className="control">
                     <img
                       onClick={prevClick}
