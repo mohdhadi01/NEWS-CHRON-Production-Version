@@ -130,10 +130,26 @@ main {
 @media (max-width: 990px) {
   .content-box {
     overflow-y: scroll;
-    margin: 40px;
+    border: 1px solid red;
   }
   main {
+    margin-top: 20px;
     height: auto;
     flex-direction: column;
+    border: 1px solid yellow;
+  }
+  .desc-Box {
+      width: 65vw;
+
+  }
+  .title-Box {
+    width: 65vw;
+
+  }
+  .input-line {
+    border: 2px solid rgb(0, 128, 107);
+  }
+  .News-category {
+    border: 2px solid purple;
   }
 }
