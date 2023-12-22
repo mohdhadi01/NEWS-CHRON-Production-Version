@@ -19,6 +19,7 @@ body {
   padding: 40px;
   height: 95vh;
   width: 93vw;
+  
   background: radial-gradient(
     circle,
     rgba(42, 42, 42, 0.811) 35%,
@@ -43,6 +44,7 @@ h1 {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  
 }
 .typeMenu {
   border: 2px solid rgb(195, 194, 194);
@@ -130,13 +132,11 @@ main {
 @media (max-width: 990px) {
   .content-box {
     overflow-y: scroll;
-    border: 1px solid red;
   }
   main {
     margin-top: 20px;
     height: auto;
     flex-direction: column;
-    border: 1px solid yellow;
   }
   .desc-Box {
       width: 65vw;
@@ -144,12 +144,40 @@ main {
   }
   .title-Box {
     width: 65vw;
-
   }
-  .input-line {
-    border: 2px solid rgb(0, 128, 107);
+ 
+  
+}
+@media (max-width: 850px) {
+  .desc-Box{
+    height: 50vh;
+    width: 70vw;
+  }
+  .title-Box {
+    width: 70vw;
   }
   .News-category {
-    border: 2px solid purple;
+    gap: 7px;
+  }
+}
+@media (max-width: 750px) {
+  .desc-Box{
+    width: 85vw;
+    height: 43vh;
+  }
+  .title-Box {
+    width: 85vw;
+  }
+  .latest{
+    font-size: 2.3rem;
+  }
+  .input-line{
+    width: 200px;
+  }
+  .search-bar {
+    width: 160px;
+  }
+  .News-category{
+    /* width: ; */
   }
 }

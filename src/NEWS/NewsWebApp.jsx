@@ -48,7 +48,7 @@ function NewsWebApp(props) {
         <header>
           <img className="logo" src={logo} alt="NEWS-CHRON" />
           <div className="searchRow">
-            <h1>Latest News</h1>
+            <h1 className="latest">Latest News</h1>
             <div className="input-line">
               <form action="" onSubmit={handleSearch}>
                 <input className="search-bar" type="text" ref={searchRef} />

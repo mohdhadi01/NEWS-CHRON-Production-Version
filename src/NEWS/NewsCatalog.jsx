@@ -32,7 +32,7 @@ function NewsCatalog(props) {
                     <h5 className="creator">{news.creator}</h5>
                     <h5 className="date">{formatDate(news.pubDate)}</h5>
                   </div>
-                  <p>{shortTitle}...</p>
+                  <p className="mytitle">{shortTitle}...</p>
                 </div>
               </div>
             </>

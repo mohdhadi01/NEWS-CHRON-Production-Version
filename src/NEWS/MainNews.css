@@ -28,7 +28,7 @@
   font-family: Gilda Display;
   font-size: 1.7rem;
   width: 30vw;
-  bottom: 20vh;
+  bottom: 21vh;
   /* right: -15px; */
   /* border: 2px solid black; */
 }
@@ -39,7 +39,6 @@
   padding: 4px;
   width: 40vw;
   bottom: 9.7vh;
-  /* border: 2px solid red; */
   color: rgb(212, 212, 212);
   font-size: 0.9rem;
   height: 10vh;
@@ -50,7 +49,6 @@
   color: rgb(199, 198, 198);
   height: 100px;
   width: 48vw;
-  /* border: 2px solid red;   */
   justify-content: space-between;
   font-family: Arial;
   color: rgb(199, 198, 198);
@@ -82,7 +80,6 @@
   width: 48vw;
   height: 37vh;
   padding: 40px;
-  /* border: 2px solid red; */
 }
 .next:hover {
   background-color: rgba(0, 0, 0, 0.838);
@@ -102,6 +99,7 @@
     width: 36vw;
   }
   .Description{
+    
     font-size:0.87rem ;
   }
 }
@@ -117,6 +115,12 @@
 }
 
 @media (max-width: 990px) {
+  .details{
+    width: 65vw;
+  }
+  .title {
+    font-size: 1.83rem;
+  }
   .control{
     width: 65vw;
   }
@@ -125,8 +129,50 @@
   }
   .Description{
     width: 58vw;
+    font-size: 0.87rem;
   }
   .heading {
     width: 65vw;
+  }
+}
+@media (max-width: 850px) {
+  .details {
+    height: 50vh;
+  }
+  .title {
+    font-size: 1.33rem;
+  }
+  .control{
+    width: 70vw;
+  }
+  .mainImage{
+    width: 70vw;
+  }
+  .heading {
+    width: 70vw;
+  }
+}
+@media (max-width: 750px) {
+  .details {
+    width: 85vw;
+    height: 43vh;
+  }
+  .title {
+    font-size: 1.13rem;
+    width: 39vw;
+  }
+  .mainImage{
+    width: 85vw;
+  }
+  .control{
+    width: 85vw;
+  }
+  .heading {
+    width: 85vw;
+  }
+  .Description{
+    width: 66vw;
+    height: 8vh;
+    font-size: 0.87rem;
   }
 }
