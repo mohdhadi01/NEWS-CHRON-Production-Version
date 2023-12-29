@@ -191,7 +191,7 @@
     width: 230px;
     bottom: 19vh;
     display: flex;
-    align-items:end;
+    align-items:flex-end;
   }
   .Description{
     font-size: 0.8rem;
