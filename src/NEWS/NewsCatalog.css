@@ -111,4 +111,27 @@
     width: 63vw;
     justify-content: start;
   }
+} 
+
+@media (max-width: 520px) {
+  .news-box{
+    height: 93px;
+  }
+  .news-box-title {
+    font-size: 0.94rem;
+    height:93px ;
+    width: 60vw;
+  }
+  .mytitle {
+    width: 53vw;
+  }
+  .creator{
+    font-size: 0.6rem;
+  }
+  .date{
+    font-size: 0.6rem;
+  }
+  .news-box-image{
+    height: 93px;
+  }
 }
