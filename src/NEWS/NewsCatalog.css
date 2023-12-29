@@ -48,7 +48,7 @@
   .date {
     font-size: 0.75rem;
   }
-  .creator {
+  .creator1 {
     font-size: 0.75rem;
     width: 130px;
     height: 20px;
@@ -62,7 +62,7 @@
   .date {
     font-size: 0.75rem;
   }
-  .creator {
+  .creator1 {
     width: 90px;
     font-size: 0.75rem;
   }
@@ -74,8 +74,8 @@
   .date {
     font-size: 0.7rem;
   }
-  .creator {
-    width: 80px;
+  .creator1 {
+    width: 95px;
     height: 18px;
     font-size: 0.7rem;
     overflow: hidden;
@@ -110,11 +110,14 @@
   .mytitle {
     width: 63vw;
     justify-content: start;
+    
   }
 } 
-
 @media (max-width: 520px) {
   .news-box{
+    height: 93px;
+  }
+  .news-box-image{
     height: 93px;
   }
   .news-box-title {
@@ -125,13 +128,17 @@
   .mytitle {
     width: 53vw;
   }
-  .creator{
+   .creator1{
     font-size: 0.6rem;
+    overflow-x: hidden;
   }
+}
+
+@media (max-width: 420px) {
+ 
   .date{
     font-size: 0.6rem;
+    
   }
-  .news-box-image{
-    height: 93px;
-  }
+  
 }

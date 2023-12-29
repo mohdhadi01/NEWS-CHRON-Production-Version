@@ -29,7 +29,7 @@ function NewsCatalog(props) {
                 />
                 <div className="news-box-title">
                   <div className="heading-line">
-                    <h5 className="creator">{news.creator}</h5>
+                    <h5 className="creator1">{news.creator}</h5>
                     <h5 className="date">{formatDate(news.pubDate)}</h5>
                   </div>
                   <p className="mytitle">{shortTitle}...</p>
