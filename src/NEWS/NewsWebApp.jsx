@@ -23,7 +23,7 @@ function NewsWebApp(props) {
         const jsonData = await reponse.json();
 
         setNewsList(jsonData.results);
-        console.log(jsonData);
+        // console.log(jsonData);
       } catch (e) {
         console.log(e, "Error Occured");
       }

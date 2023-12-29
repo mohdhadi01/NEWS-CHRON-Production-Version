@@ -61,7 +61,7 @@ function MainNews(props) {
 
           return (
             <>
-              <div className="mainScreen">
+              <div key={i} className="mainScreen">
                 <img
                   className="mainImage"
                   key={i}

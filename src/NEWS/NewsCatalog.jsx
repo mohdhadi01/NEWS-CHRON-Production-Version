@@ -21,7 +21,7 @@ function NewsCatalog(props) {
 
           return (
             <>
-              <div className="news-box" >
+              <div key={i} className="news-box" >
                 <img
                   className="news-box-image"
                   src={news.image_url}
