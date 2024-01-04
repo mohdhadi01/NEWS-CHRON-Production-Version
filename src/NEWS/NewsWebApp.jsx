@@ -52,12 +52,6 @@ function NewsWebApp(props) {
     }
   }, [iValue]);
 
-  // useEffect(()=>{
-  //     if(iValue=="ok"){
-  //     descBoxRef.current.style.display = 'none';
-  //     titleBoxRef.current.style.display = "none"; 
-  //   }
-  // },[iValue])
     
 
   return (
@@ -123,6 +117,10 @@ function NewsWebApp(props) {
             </button>
           </div>
         </header>
+
+        <div className="popupContainer">
+        {newsLoaded && Iloaded && <NewsPopup passJsonData={newsList} iValue={iValue}/>}
+        </div>
         <main>
           <div className="desc-Box" ref={descBoxRef}>
             <MainNews passJsonData={newsList} setIValue={setIValue} />
@@ -134,9 +132,9 @@ function NewsWebApp(props) {
          
         </main>
         
-        <div className="popupContainer">
+        {/* <div className="popupContainer">
         {newsLoaded && Iloaded && <NewsPopup passJsonData={newsList} iValue={iValue}/>}
-        </div>
+        </div> */}
         <Footer/> 
       </div>
     </div>

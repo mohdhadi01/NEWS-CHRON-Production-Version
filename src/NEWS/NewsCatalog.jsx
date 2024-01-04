@@ -3,8 +3,13 @@ import "../NEWS/NewsCatalog.css";
 
 
 function NewsCatalog(props) {
-  const newsDetail = props.passJsonData;
+  const passnewsDetail = props.passJsonData;
   const [iValue,setIValue]=useState()
+
+  const newsDetail = passnewsDetail.filter(
+    (news) => news.title != null && news.image_url != null
+  );
+
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "long", year: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -19,7 +24,7 @@ function NewsCatalog(props) {
           const shortTitle = titleWords.slice(0, 7).join(" ");
           return (
             <>
-              <div key={i} className="news-box" onClick={() => { props.setIValue(i); }} >
+              <div key={i} className="news-box" onClick={() => {props.setIValue(i); }} >
                 <img
                   className="news-box-image"
                   src={news.image_url}

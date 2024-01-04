@@ -5,17 +5,18 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  /* transition: ease 0.1s; */
+  /* transition: ease 0.7s; */
 }
 .mainScreen {
   display: flex;
-  
+ 
 }
 .mainImage {
   width: 48vw;
   height: 58vh;
   filter: brightness(35%);
   object-fit: cover;
+  transition: 0.9s ease-in-out;
 }
 .details {
   position: absolute;
