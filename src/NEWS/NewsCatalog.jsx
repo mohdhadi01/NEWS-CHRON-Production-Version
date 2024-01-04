@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../NEWS/NewsCatalog.css";
 
 
 function NewsCatalog(props) {
-  const newsDetail = props.passJsonData; 
-
-
+  const newsDetail = props.passJsonData;
+  const [iValue,setIValue]=useState()
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "long", year: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -18,10 +17,9 @@ function NewsCatalog(props) {
         if (news.title != null && news.image_url != null) {
           const titleWords = news.title.split(" ");
           const shortTitle = titleWords.slice(0, 7).join(" ");
-
           return (
             <>
-              <div key={i} className="news-box" >
+              <div key={i} className="news-box" onClick={() => { props.setIValue(i); }} >
                 <img
                   className="news-box-image"
                   src={news.image_url}

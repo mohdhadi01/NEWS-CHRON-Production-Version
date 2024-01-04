@@ -9,6 +9,7 @@
 }
 .mainScreen {
   display: flex;
+  
 }
 .mainImage {
   width: 48vw;
@@ -40,7 +41,7 @@
   padding: 4px;
   width: 40vw;
   bottom: 9.7vh;
-  color: rgb(212, 212, 212);
+  color: rgba(212, 212, 212, 0.792);
   font-size: 0.9rem;
   height: 10vh;
   overflow-y: hidden;
@@ -134,6 +135,7 @@
   }
   .mainImage{
     width: 65vw;
+    
   }
   .Description{
     width: 58vw;
@@ -187,7 +189,7 @@
 
 @media (max-width: 520px) {
   .title{
-    height: 11vh;
+    height: 12vh;
     width: 230px;
     bottom: 19vh;
     display: flex;
@@ -225,4 +227,25 @@
     bottom: 6.4vh;
     height: 7.8vh;
   }
+}
+
+.Readmore{
+  margin-top: 10px; 
+  padding-top: 6.8px;
+  width: 120px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.299);
+  background-color: rgba(135, 189, 230, 0.121);
+  border-radius:4px;
+  box-shadow: 0 0.5em 0.5em -0.4em rgba(255, 255, 255, 0.306);
+  transition: all 0.3s ease-in;
+}
+.Readmore:hover{
+  box-shadow: 0 0.5em 0.5em -0.4em white;
+  transform: translateY(-0.25em);
+}
+.Readmore:active{
+  transform: scale(0.9);
+  border: 2px solid white;
 }

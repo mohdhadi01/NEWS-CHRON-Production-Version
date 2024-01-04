@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef,useEffect,useState } from "react";
+import { Link } from "react-router-dom";
 import "../NEWS/MainNews.css";
 import DateLogo from "../Assets/DateLogo.png";
 import next from "../Assets/nextArrow.png";
 import previous from "../Assets/previousLogo.png";
-import { Button, Flex } from "antd";
+import { ExportOutlined } from "@ant-design/icons";
+
 
 function MainNews(props) {
+  const [iValue,setIValue]=useState() 
   const newsList = props.passJsonData;
   const refHii = useRef(null);
   const scrollLength = "58";
@@ -28,13 +31,29 @@ function MainNews(props) {
       currentvalue = 0;
       ShiftNews();
     }
-    // console.log("next Clicked")
+    
   }
-  // let autoSlide=setInterval(nextClick,6000)
-  // function stopSlide(autoSlide){
-  //   console.log("clickedd");
-  //   clearInterval(autoSlide)
-  // }
+ 
+  const startAutoSlide = () => {
+    return setInterval(() => {
+      if (currentvalue < filteredNews.length - 1) {
+        currentvalue++;
+        ShiftNews();
+      } else {
+        currentvalue = 0;
+        ShiftNews();
+      }
+    }, 3000); 
+  };
+  useEffect(() => {
+    let autoSlide = startAutoSlide();
+    return () => {
+      clearInterval(autoSlide);
+    };
+  }, [newsList]);
+
+
+
   function prevClick() {
     if (currentvalue > 0) {
       currentvalue--;
@@ -44,7 +63,6 @@ function MainNews(props) {
       currentvalue = filteredNews.length - 1;
       ShiftNews();
     }
-    // console.log("prev Clicked")
   }
 
   const formatDate = (dateString) => {
@@ -61,7 +79,7 @@ function MainNews(props) {
 
           return (
             <>
-              <div key={i} className="mainScreen">
+              <div key={i} className="mainScreen" >
                 <img
                   className="mainImage"
                   key={i}
@@ -81,11 +99,12 @@ function MainNews(props) {
                       {news.creator} <br />
                     </h5>
                   </div>
-                  <div className="textDetail">
+                  <div className="textDetail"> 
                     <h2 className="title">{shortTitle}"</h2>
                     <p className="Description">{news.description}</p>
                   </div>
-                  {/* <Button type="primary">Read More.</Button> */}
+                  
+
                   <div className="control">
                     <img
                       onClick={prevClick}
@@ -93,6 +112,7 @@ function MainNews(props) {
                       src={previous}
                       alt=""
                     />
+                   <h5 onClick={()=>props.setIValue(i)} className="Readmore ">Read more... <ExportOutlined /></h5>
                     <img
                       onClick={nextClick}
                       className="next"

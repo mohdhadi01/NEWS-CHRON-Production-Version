@@ -5,12 +5,19 @@ import search from "../Assets/search.png";
 import NewsCatalog from "./NewsCatalog";
 import arrow from "../Assets/down-arrow.gif";
 import MainNews from "./MainNews";
-import backgroundImage from "../Assets/background.jpg";
+import Footer from "./Footer";
+import NewsPopup from "./NewsPopup";
+
 
 function NewsWebApp(props) {
-  document.body.style.backgroundImage = `url(${backgroundImage})`;
+  const descBoxRef = useRef()
+  const titleBoxRef = useRef()
+  const [newsLoaded, setNewsLoaded] = useState(false);
+  const [iValue,setIValue]=useState()
+  const [Iloaded,setIloaded]=useState(false);
+  
   const APIKEY = props.apiKey;
-  const [searchTerm, setSearchTerm] = useState("Gta 6");
+  const [searchTerm, setSearchTerm] = useState("earth");
   // const apiURL = `https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-12-09&to=2023-12-09&sortBy=popularity&apiKey=${APIKEY}`;
   const apiURL = `https://newsdata.io/api/1/news?apikey=${APIKEY}&q=${searchTerm}`;
   const [newsList, setNewsList] = useState([]);
@@ -21,9 +28,8 @@ function NewsWebApp(props) {
       try {
         const reponse = await fetch(apiURL);
         const jsonData = await reponse.json();
-
         setNewsList(jsonData.results);
-        // console.log(jsonData);
+        setNewsLoaded(true);
       } catch (e) {
         console.log(e, "Error Occured");
       }
@@ -41,6 +47,20 @@ function NewsWebApp(props) {
     const selectedCategory = event.target.value;
     setSearchTerm(selectedCategory);
   }
+
+  useEffect(() => {
+    if (iValue != null) {
+      setIloaded(true);
+    }
+  }, [iValue]);
+
+  useEffect(()=>{
+      if(iValue=="ok"){
+      descBoxRef.current.style.display = 'none';
+      titleBoxRef.current.style.display = "none"; 
+    }
+  },[iValue])
+    
 
   return (
     <div className="mainContainer">
@@ -106,14 +126,20 @@ function NewsWebApp(props) {
           </div>
         </header>
         <main>
-          <div className="desc-Box">
-            <MainNews passJsonData={newsList} />
+          <div className="desc-Box" ref={descBoxRef}>
+            <MainNews passJsonData={newsList} setIValue={setIValue} />
           </div>
-          <div className="title-Box">
-            <NewsCatalog passJsonData={newsList} />
-            <img className="downarrow" src={arrow} alt="" />
+          <div className="title-Box" ref={titleBoxRef}>
+            <NewsCatalog passJsonData={newsList} setIValue={setIValue}/>
+            {/* ---------------------- */}
           </div>
+         
         </main>
+        
+        <div className="popupContainer">
+        {newsLoaded && Iloaded && <NewsPopup passJsonData={newsList} iValue={iValue} />}
+        </div>
+        <Footer/> 
       </div>
     </div>
   );
