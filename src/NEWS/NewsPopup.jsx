@@ -6,7 +6,6 @@ function NewsPopup(props) {
   const showNewsRef = useRef(null);
   const iValue = props.iValue;
   const [myValue,setMyValue]=useState(iValue)
-  props.setMyValue;
   const newsList = props.passJsonData;  
   const filteredNews = newsList.filter(
     (news) => news.title != null && news.image_url != null
@@ -17,15 +16,14 @@ function NewsPopup(props) {
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
   useEffect(()=>{
-    if(myValue=="ok"){
+    if(iValue!==null){
       showNewsRef.current.style.display = 'block';
-      
     }
   },[iValue])
  
   const closeNews = () => {
-    if(iValue!="ok"){
-      setMyValue("ok")
+    if(iValue!==null){
+      setMyValue(null);
       showNewsRef.current.style.display = 'none';
     }
   };

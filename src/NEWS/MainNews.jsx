@@ -72,7 +72,7 @@ function MainNews(props) {
 
   return (
     <div className="hii" ref={refHii}>
-      {newsList.map((news, i) => {
+      {filteredNews.map((news, i) => {
         if (news.title != null && news.image_url != null) {
           const titleWords = news.title.split(" ");
           const shortTitle = titleWords.slice(0, 16).join(" ");
