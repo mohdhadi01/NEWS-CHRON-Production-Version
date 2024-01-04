@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom';
+import {React,useEffect} from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import NewsWebApp from '../NEWS/NewsWebApp';
 import backgroundImage from "../Assets/background.jpg";
 import ClickedNews from "./ClickedNews";
@@ -8,6 +8,12 @@ import NewsPopup from './NewsPopup';
 function RoutingNav(props) {
     const apiKey=props.apiKey;
     document.body.style.backgroundImage = `url(${backgroundImage})`;
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      navigate('/Home');
+  }, [navigate]);
+
   return (
     <div>
       
