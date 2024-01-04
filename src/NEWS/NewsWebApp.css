@@ -9,7 +9,6 @@ body {
   width: 500px;
 }
 .mainContainer {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +16,9 @@ body {
 }
 .content-box {
   padding: 40px;
-  height: 95vh;
+  margin: 20px 0 20px 0;
   width: 93vw;
-
+  position: relative;
   background: radial-gradient(
     circle,
     rgba(42, 42, 42, 0.811) 35%,
@@ -46,17 +45,19 @@ h1 {
   margin-top: 20px;
 }
 .typeMenu {
-  border: 2px solid rgb(195, 194, 194);
+  border: 2px solid rgba(195, 194, 194, 0.811);
+  background-color: rgba(113, 109, 109, 0.039);
   padding: 4px 10px 3px 10px;
   border-radius: 20px;
   cursor: pointer;
-  background: none;
   color: white;
   height: 26px;
   width: 70px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(32, 31, 31, 0.22) 0px 10px 12px;
 }
 .typeMenu:focus {
   border: 2px solid rgb(153, 74, 4);
+  background-color: rgb(153, 74, 4);
 }
 .searchRow {
   display: flex;
@@ -90,8 +91,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: auto;
   gap: 40px;
+  margin-top: 30px;
 }
 .desc-Box {
   height: 58vh;
@@ -99,11 +101,12 @@ main {
   /* border: 2px solid yellow; */
   display: flex;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
 }
 .title-Box {
   height: 58vh;
   width: 33vw;
-  /* border: 2px solid rgb(0, 255, 76); */
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -116,9 +119,6 @@ main {
 ::-webkit-scrollbar-thumb {
   background-color: #d3b1914c;
 }
-/* ::-webkit-scrollbar-track{
-	background-color: #a69c9cd4;
-} */
 
 .downarrow {
   mix-blend-mode: multiply;
@@ -232,6 +232,11 @@ main {
   }
   .typeMenu{
     width: 70px;
-  }
-  
+  } 
+}
+
+.popupContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }

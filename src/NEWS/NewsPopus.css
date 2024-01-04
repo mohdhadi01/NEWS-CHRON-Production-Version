@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=Play:regular,700);
+.newsimg{
+    width: 86vw;
+    height: 37vh;
+    object-fit:cover;
+    border-top-left-radius:40px ;
+    border-top-right-radius:40px ;
+     
+}
+.SelectedIMG{
+    position: relative;
+}
+.ShowNews{
+    width: 86vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* border: 2px solid red; */
+    border-top-left-radius:40px ;
+    border-top-right-radius:40px ;
+    /* background-color: rgba(250, 235, 215, 0.479); */
+    background: radial-gradient(
+    circle,
+    rgba(42, 42, 42, 0.811) 35%,
+    rgba(79, 60, 47, 0.989) 100%
+  );
+    /* position: absolute; */
+    top: 150px;
+}
+.newsRead{
+    padding: 15px;
+}
+.readTitle{
+    color: white;
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+    font-family: play;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.ReadDate{
+    color: rgba(139, 139, 139, 0.865);
+    font-size: 0.8rem;
+    margin:10px 0px ;
+}
+.ReadDesc{
+    color: rgb(231, 230, 230);
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-family: play;
+    margin:10px 0px ;
+   
+}
+.ReadContent{
+    color: rgb(213, 212, 212);
+    font-weight: 100;
+}
+.circle{
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 7px;
+    color: white;
+    background-color: black;
+    
+    
+}
+.closeNews{
+    border: 2px solid rgb(239, 239, 239);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    padding-top: 8px;  
+    cursor: pointer;   
+}
+.OverImage{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.Readpublisher{
+    margin-right: auto;
+    margin-top: 5px;
+    color: rgb(249, 248, 248);
+    font-style: italic;
+    font-size: small;
+    font-family: play;
+    margin-left: 5px;
+    
+}
+@media (min-width:920px) {
+    .newsimg{
+        height: 55vh;
+    }
+}
+@media (min-width:1250px) {
+    .newsimg{
+        height: 70vh;
+    }
+    .Readpublisher{
+        font-size: 1rem;
+    }
+}
