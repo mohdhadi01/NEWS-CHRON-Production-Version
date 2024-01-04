@@ -3,25 +3,23 @@ import "../NEWS/NewsWebApp.css";
 import logo from "../Assets/logo.png";
 import search from "../Assets/search.png";
 import NewsCatalog from "./NewsCatalog";
-import arrow from "../Assets/down-arrow.gif";
 import MainNews from "./MainNews";
 import Footer from "./Footer";
 import NewsPopup from "./NewsPopup";
 
 
 function NewsWebApp(props) {
-  const descBoxRef = useRef()
-  const titleBoxRef = useRef()
-  const [newsLoaded, setNewsLoaded] = useState(false);
-  const [iValue,setIValue]=useState()
-  const [Iloaded,setIloaded]=useState(false);
-  
   const APIKEY = props.apiKey;
   const [searchTerm, setSearchTerm] = useState("earth");
   // const apiURL = `https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-12-09&to=2023-12-09&sortBy=popularity&apiKey=${APIKEY}`;
   const apiURL = `https://newsdata.io/api/1/news?apikey=${APIKEY}&q=${searchTerm}`;
   const [newsList, setNewsList] = useState([]);
   const searchRef = useRef(null);
+  const descBoxRef = useRef()
+  const titleBoxRef = useRef()
+  const [newsLoaded, setNewsLoaded] = useState(false);
+  const [iValue,setIValue]=useState()
+  const [Iloaded,setIloaded]=useState(false);
 
   useEffect(() => {
     async function fetchAPI() {
@@ -54,12 +52,12 @@ function NewsWebApp(props) {
     }
   }, [iValue]);
 
-  useEffect(()=>{
-      if(iValue=="ok"){
-      descBoxRef.current.style.display = 'none';
-      titleBoxRef.current.style.display = "none"; 
-    }
-  },[iValue])
+  // useEffect(()=>{
+  //     if(iValue=="ok"){
+  //     descBoxRef.current.style.display = 'none';
+  //     titleBoxRef.current.style.display = "none"; 
+  //   }
+  // },[iValue])
     
 
   return (
@@ -137,7 +135,7 @@ function NewsWebApp(props) {
         </main>
         
         <div className="popupContainer">
-        {newsLoaded && Iloaded && <NewsPopup passJsonData={newsList} iValue={iValue} />}
+        {newsLoaded && Iloaded && <NewsPopup passJsonData={newsList} iValue={iValue}/>}
         </div>
         <Footer/> 
       </div>

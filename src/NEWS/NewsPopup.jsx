@@ -6,6 +6,7 @@ function NewsPopup(props) {
   const showNewsRef = useRef(null);
   const iValue = props.iValue;
   const [myValue,setMyValue]=useState(iValue)
+  props.setMyValue;
   const newsList = props.passJsonData;  
   const filteredNews = newsList.filter(
     (news) => news.title != null && news.image_url != null
