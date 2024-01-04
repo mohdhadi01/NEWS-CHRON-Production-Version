@@ -10,7 +10,7 @@ import NewsPopup from "./NewsPopup";
 
 function NewsWebApp(props) {
   const APIKEY = props.apiKey;
-  const [searchTerm, setSearchTerm] = useState("earth");
+  const [searchTerm, setSearchTerm] = useState("sci fi");
   // const apiURL = `https://newsapi.org/v2/everything?q=${searchTerm}&from=2023-12-09&to=2023-12-09&sortBy=popularity&apiKey=${APIKEY}`;
   const apiURL = `https://newsdata.io/api/1/news?apikey=${APIKEY}&q=${searchTerm}`;
   const [newsList, setNewsList] = useState([]);
