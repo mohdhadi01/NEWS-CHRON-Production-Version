@@ -10,7 +10,6 @@ function NewsPopup(props) {
   const filteredNews = newsList.filter(
     (news) => news.title != null && news.image_url != null
   );
-
   const formatDate = (dateString) => {
     const options = { day: "2-digit", month: "long", year: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
